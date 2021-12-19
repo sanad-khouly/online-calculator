@@ -1,0 +1,68 @@
+<Html>
+    <style>
+        #tbl{
+            border: 15px solid blue;
+            background-color: green;
+            margin:auto;
+        }
+        .buttonsss{
+            border-radius: 25px;
+        }
+    </style>
+    <head> 
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h1>DIGITAL CALC</h1>
+        <table id="tbl" cellspacing="30px" >
+            <tr>
+                <td colspan="4" > <input type="text" id="input" class="buttonsss"></td>
+            </tr>
+            <tr>
+                <td> <button onclick="prinf(7)"  class="buttonsss"> 7</button></td>
+                <td> <button onclick="prinf(8)" class="buttonsss"> 8</button></td>
+                <td> <button onclick="prinf(9)" class="buttonsss"> 9</button></td>
+                <td> <button onclick="prinf('*')" class="buttonsss"> *</button></td>
+            </tr>
+            <tr>
+                <td> <button onclick="prinf(4)" class="buttonsss"> 4</button></td>
+                <td> <button onclick="prinf(5)" class="buttonsss"> 5</button></td>
+                <td> <button onclick="prinf(6)" class="buttonsss"> 6</button></td>
+                <td> <button onclick="prinf('-')" class="buttonsss"> -</button></td>
+            </tr>
+            <tr>
+                <td> <button onclick="prinf(1)" class="buttonsss"> 1</button></td>
+                <td> <button onclick="prinf(2)" class="buttonsss"> 2</button></td>
+                <td> <button onclick="prinf(3)" class="buttonsss"> 3</button></td>
+                <td> <button onclick="prinf('+')" class="buttonsss"> +</button></td>
+            </tr>
+            <tr>
+                <td> <button onclick="prinf('/')" class="buttonsss"> /</button></td>
+                <td> <button onclick="prinf(0)" class="buttonsss"> 0</button></td>
+                <td> <button onclick="prinf('.')" class="buttonsss"> .</button></td>
+                <td> <button onclick="result()" class="buttonsss"> =</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"> <button onclick="remo()" id="cleari" class="buttonsss">clear all </button> </td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function result(){
+            let x = document.querySelector("#input").value ;
+            let result = eval(x) ;
+            document.querySelector("#input").value = result
+        }
+            
+        
+        function prinf(x){
+            let input = document.querySelector("#input")
+            input.value += x;
+        }
+        function remo(y){
+            let clear = document.querySelector("#cleari")
+            let input = document.querySelector("#input")
+            input.value = "";
+        }
+    </script>
+</Html>

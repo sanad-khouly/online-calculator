@@ -1,0 +1,73 @@
+
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .navbar ul{
+                list-style: none;
+            }
+            .navbar ul a li{
+                float: left;
+                padding: 0px 20px;
+                font-size: 17px;
+                line-height: 50px;
+            }
+            .navbar{
+                height: 50px;
+                background-color: black;
+            }
+            li:hover{
+                background-color: purple;
+                color: black;
+            }
+            .banner{
+                height: 500px;
+                background-image:url(calculator-L.png);
+                background-size: 100% 100%;
+
+            }
+            .head{
+                position: relative;
+                top: 55%;
+                text-align: center;
+            }
+            .head h2{
+                color: white;
+                font-family: cursive;
+                font-size: 30px;
+            }
+            .head a{
+                font-size: 25px;
+                text-decoration: none;
+                color: white;
+                display: inline-block;
+                background-color: black;
+                padding: 10px;
+                width: auto;
+
+            }
+            .section1{
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 30px;
+            }
+            .section1 h2{
+                margin: 35px;
+            }
+            .section1 img{
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px white;
+            }
+            .section1 table{
+                color: white;
+                margin: 20px auto;
+                background-color: black;
+                box-shadow: 5px 5px 20px;
+                padding: 10px;
+            }
+             .section1 td{
+                 text-align: center;
+                 width: 130px;
+                 font-size: 20px;
+             }

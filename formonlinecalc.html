@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            #desc{
+                width: 300px;
+                height: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="Thankyou.html" method="POST" onsubmit=" return passval()">
+            username : <input type="text" placeholder="Name" name="u" required > <br> <br>
+            email : <input type="text" name="em" placeholder="email" id="cpass"> <label id="label1"> </label><br> <br>
+            <input type="checkbox" class="checkbox"> I accept the privacy and policy and terms & conditions <br>
+            <label id="label2"></label>
+            
+            <br><br>
+            Concern : <br> <textarea id="desc" oninput="counter()" maxlength = "3500"></textarea> <br>
+                            <label id="count" ></label>
+            <br>
+            <button type="submit"> sign up</button>
+        </form>
+        <script>
+            function counter(){
+                let text = document.querySelector("#desc").value ;
+                document.querySelector("#count").innerHTML = text.length + "/3500" ;
+
+            }
+            function passval(){
+                let p1 = document.querySelector("#pass").value ;
+                let p2 = document.querySelector("#cpass").value ;
+                let l1 = document.querySelector("#label1")
+                let x = document.querySelector(".checkbox") ;
+                let xy= document.querySelector("#label2")
+
+                
+                if( p1 != p2){
+                    // alert("Ur passwords dont match")
+                    l1.innerHTML = "Passwords dont match"
+                    l1.style.color = "red"
+                    document.querySelector.style.border("#label1")
+                    return false ; 
+                    
+                }
+                if(x.checked == false){
+                    xy.style.color = "red"
+                    xy.innerHTML = "Please accept our terms & conditions"
+                    return false ;
+                    
+                }
+                
+            }
+            
+        </script>
+    </body>
